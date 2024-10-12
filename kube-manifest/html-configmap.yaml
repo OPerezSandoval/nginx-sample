@@ -6,12 +6,12 @@ data:
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome to Nginx Webhook Test</title>
+        <title>Nginx Sample App</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div class="container">
-            <h1>Welcome to My Nginx Web App!</h1>
+            <h1>Welcome to My Nginx web app with ArgoCD</h1>
             <p>This web application is powered by Nginx running on Kubernetes.</p>
             <div class="card">
                 <h2>About the App</h2>
