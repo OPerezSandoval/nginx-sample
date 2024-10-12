@@ -13,6 +13,7 @@ data:
         <div class="container">
             <h1>Welcome to My Nginx web app with ArgoCD</h1>
             <p>This web application is powered by Nginx running on Kubernetes.</p>
+            <p>It also has ArgoCd and githuh webhook connected to it.</p>
             <div class="card">
                 <h2>About the App</h2>
                 <p>This app is using a Docker image built with Nginx, pushed to Docker Hub, and deployed in Kubernetes using a Persistent Volume to serve this HTML file.</p>
