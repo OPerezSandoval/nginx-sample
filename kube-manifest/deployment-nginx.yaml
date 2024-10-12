@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deployment-nginx
+  name: deployment-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deployment-nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deployment-nginx
+    spec:
+      containers:
+        - image: operez11/nginx-sample:1.0.0
+          name: nginx-sample
+          ports: 
+          - containerPort: 80 
+          resources: {}
+          volumeMounts: 
+          - name: pvc-volume
+            mountPath: /data 
+          - name: config-mount
+            mountPath: /usr/share/nginx/html
+          env:
+          - name: CONFIG_VAR
+            valueFrom:
+              configMapKeyRef:
+                name: configmap-nginx
+                key: key1
+          - name: SEC_VAR
+            valueFrom: 
+              secretKeyRef:
+                name: secret-nginx
+                key: username
+      volumes:
+      - name: pvc-volume
+        persistentVolumeClaim:
+          claimName: pvc-nginx
+      - name: config-mount
+        configMap: 
+          name: html-configmap
+status: {}

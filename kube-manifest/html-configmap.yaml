@@ -1,0 +1,84 @@
+apiVersion: v1
+data:
+  index.html: |+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome to Nginx App</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to My Nginx Web App!</h1>
+            <p>This web application is powered by Nginx running on Kubernetes.</p>
+            <div class="card">
+                <h2>About the App</h2>
+                <p>This app is using a Docker image built with Nginx, pushed to Docker Hub, and deployed in Kubernetes using a Persistent Volume to serve this HTML file.</p>
+            </div>
+            <footer>
+                <p>Created by <strong>$student_name</strong></p>
+            </footer>
+        </div>
+    </body>
+    </html>
+
+  styles.css: |+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    h1 {
+        color: #4CAF50;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .card {
+        background-color: #fafafa;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 1em;
+        color: #666;
+    }
+
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2024-10-12T19:04:48Z"
+  name: html-configmap
+  namespace: nginx-namespace
+  resourceVersion: "85237"
+  uid: c8809e78-eb2a-4e8b-9b49-60998b8cf6e3
