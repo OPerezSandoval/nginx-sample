@@ -77,8 +77,5 @@ data:
 
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2024-10-12T19:04:48Z"
   name: html-configmap
   namespace: nginx-namespace
-  resourceVersion: "85237"
-  uid: c8809e78-eb2a-4e8b-9b49-60998b8cf6e3
