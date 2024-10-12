@@ -18,7 +18,7 @@ data:
                 <p>This app is using a Docker image built with Nginx, pushed to Docker Hub, and deployed in Kubernetes using a Persistent Volume to serve this HTML file.</p>
             </div>
             <footer>
-                <p>Created by <strong>$student_name</strong></p>
+                <p>Created by <strong>Omar</strong></p>
             </footer>
         </div>
     </body>
